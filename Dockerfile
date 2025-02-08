@@ -9,7 +9,7 @@ RUN npm run build --prod
 
 FROM nginx:1.25
 
-COPY --from=build /app/dist/assetflow-web /usr/share/nginx/html
+COPY --from=build /app/dist/assetflow-web/browser /usr/share/nginx/html
 
 EXPOSE 80
 
